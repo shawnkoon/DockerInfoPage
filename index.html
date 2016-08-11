@@ -3,6 +3,12 @@
 
 <head>
     <title>All about the Docker!</title>
+    <style>
+        td {
+            border: 1px dotted blue;
+            padding-right: 5px;
+        }
+    </style>
 </head>
 
 <body>
@@ -20,6 +26,10 @@
             <td>Looks at the current running Processes on Docker.</td>
         </tr>
         <tr>
+            <td>$ docker ps -a</td>
+            <td>Looks at the ALL Processes on Docker.</td>
+        </tr>
+        <tr>
             <td>$ docker version</td>
             <td>Looks at the version of Client/Server of Docker.</td>
         </tr>
@@ -27,6 +37,28 @@
             <td>$ docker info</td>
             <td>Looks at the Detailed information of Docker status.</td>
         </tr>
+        <tr>
+            <td>$ docker images</td>
+            <td>Looks at the current Images that are on the Docker.</td>
+        </tr>
+        <tr>
+            <td>$ docker run hello-world</td>
+            <td>Install hello-world image from docker daemon and run img.</td>
+        </tr>
+        <tr>
+            <td>$ docker rm [Container_ID]</td>
+            <td>Remove Exited Image from docker.</td>
+        </tr>
+        <tr>
+            <td>$ docker rm -f [Container_ID]</td>
+            <td>Forcefully Remove Image from docker.</td>
+        </tr>
+        <tr>
+            <td>$ docker start [Container_ID]</td>
+            <td>Start the Existing Docker Img.</td>
+        </tr>
+
+
     </table>
 </body>
 
