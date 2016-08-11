@@ -3,75 +3,85 @@
 
 <head>
     <title>All about the Docker!</title>
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <style>
         td {
             border: 1px dotted blue;
             padding-right: 5px;
         }
     </style>
+
 </head>
 
 <body>
-    <h1>Welcome! Here are List of the things..</h1>
 
-    <!-- Please Add items in the List -->
-    <ul>
-        <li><a href="https://docs.docker.com/docker-for-windows/">Get Started With Docker(Windows)</a><br>Talks about How to install Docker on Window As well as few basic commands.</li>
-    </ul>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Welcome! Here are List of the things..!</h1>
+            <p>
+                <a class="btn btn-primary btn-lg" href="https://docs.docker.com/docker-for-windows/">Get Started (Windows)</a>
+                <p>Talks about How to install Docker on Windows as well as few basic commands</p>
+            </p>
+        </div>
+    </div>
 
-    <!-- Please Add Commands in the List -->
-    <table style="border: 1px solid black;">
-        <th>Commands for Docker.</th>
-        <tr>
-            <td>$ docker ps</td>
-            <td>Looks at the current running Processes on Docker.</td>
-        </tr>
-        <tr>
-            <td>$ docker ps -a</td>
-            <td>Looks at the ALL Processes on Docker.</td>
-        </tr>
-        <tr>
-            <td>$ docker version</td>
-            <td>Looks at the version of Client/Server of Docker.</td>
-        </tr>
-        <tr>
-            <td>$ docker info</td>
-            <td>Looks at the Detailed information of Docker status.</td>
-        </tr>
-        <tr>
-            <td>$ docker images</td>
-            <td>Looks at the current Images that are on the Docker.</td>
-        </tr>
-        <tr>
-            <td>$ docker run hello-world</td>
-            <td>Install hello-world image from docker daemon and run img.</td>
-        </tr>
-        <tr>
-            <td>$ docker rm [Container_ID]</td>
-            <td>Remove Exited Image from docker.</td>
-        </tr>
-        <tr>
-            <td>$ docker rm -f [Container_ID]</td>
-            <td>Forcefully Remove Image from docker.</td>
-        </tr>
-        <tr>
-            <td>$ docker start [Container_ID]</td>
-            <td>Start the Existing Docker Img.</td>
-        </tr>
-        <tr>
-            <td>$ docker rmi [Image_ID]</td>
-            <td>Remove Image that is not in Container.</td>
-        </tr>
-        <tr>
-            <td>$ docker run -it ubuntu bash</td>
-            <td>Install ubuntu:latest Image and run in Bash shell.</td>
-        </tr>
-        <tr>
-            <td>$ exit</td>
-            <td>Exit out of running shell.</td>
-        </tr>
-
-    </table>
+    <div class="container">
+        <div class="row">
+            <h2 style="margin-bottom: 20px;">Commands</h2>
+            
+            <!-- Please Add Commands in the List -->
+            <table style="border: 1px solid black;" class="table table-hover">
+                <tr>
+                    <td>$ docker ps</td>
+                    <td>Looks at the current running Processes on Docker.</td>
+                </tr>
+                <tr>
+                    <td>$ docker ps -a</td>
+                    <td>Looks at the ALL Processes on Docker.</td>
+                </tr>
+                <tr>
+                    <td>$ docker version</td>
+                    <td>Looks at the version of Client/Server of Docker.</td>
+                </tr>
+                <tr>
+                    <td>$ docker info</td>
+                    <td>Looks at the Detailed information of Docker status.</td>
+                </tr>
+                <tr>
+                    <td>$ docker images</td>
+                    <td>Looks at the current Images that are on the Docker.</td>
+                </tr>
+                <tr>
+                    <td>$ docker run hello-world</td>
+                    <td>Install hello-world image from docker daemon and run img.</td>
+                </tr>
+                <tr>
+                    <td>$ docker rm [Container_ID]</td>
+                    <td>Remove Exited Image from docker.</td>
+                </tr>
+                <tr>
+                    <td>$ docker rm -f [Container_ID]</td>
+                    <td>Forcefully Remove Image from docker.</td>
+                </tr>
+                <tr>
+                    <td>$ docker start [Container_ID]</td>
+                    <td>Start the Existing Docker Img.</td>
+                </tr>
+                <tr>
+                    <td>$ docker rmi [Image_ID]</td>
+                    <td>Remove Image that is not in Container.</td>
+                </tr>
+                <tr>
+                    <td>$ docker run -it ubuntu bash</td>
+                    <td>Install ubuntu:latest Image and run in Bash shell.</td>
+                </tr>
+                <tr>
+                    <td>$ exit</td>
+                    <td>Exit out of running shell.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>
