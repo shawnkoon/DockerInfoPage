@@ -5,3 +5,12 @@ a {
 a:hover {
     cursor: pointer;
 }
+
+td {
+    border-right: 1px dotted black;
+    padding-right: 5px;
+}
+
+tr:nth-child(2n) {
+    background-color: #EEEEEE;
+}
