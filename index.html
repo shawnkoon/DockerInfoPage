@@ -77,58 +77,55 @@
         </div>
         <div class="row">
             <h2><a>Dockerfile Instructions</a></h2>
+            <p>Only <i>shell</i> forms are used, for <i>exec</i> forms see references.</p>
 
             <!-- Please Add Commands in the List -->
             <table class="table table-hover">
                 <tr>
-                    <td>$ docker ps</td>
-                    <td>Looks at the current running Processes on Docker.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/from">FROM &ltimage&gt</a></td>
+                    <td>Sets the image where instructions are to be ran. Must be at top of Dockerfile.</td>
                 </tr>
                 <tr>
-                    <td>$ docker ps -a</td>
-                    <td>Looks at the ALL Processes on Docker.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/run">RUN &ltcommand&gt [flags] [param,...]<a/></td>
+                    <td>Executes commands. Creates and commits new layer, so subsequent instructions work with newly committed image.</td>
                 </tr>
                 <tr>
-                    <td>$ docker version</td>
-                    <td>Looks at the version of Client/Server of Docker.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/cmd">CMD &ltcommand&gt [flags] [param,...]</a></td>
+                    <td>
+                        Sets default command, which will be executed when the container is run without specifying a command. Only one will work per Dockerfile, last one used. If running with command specified, CMD will be overridden and ignored.
+                    </td>
                 </tr>
                 <tr>
-                    <td>$ docker info</td>
-                    <td>Looks at the Detailed information of Docker status.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/entrypoint">ENTRYPOINT &ltcommand&gt [flags] [param,...]</a></td>
+                    <td>Same as CMD, but will not be overridden when running with command specified.</td>
                 </tr>
                 <tr>
-                    <td>$ docker images</td>
-                    <td>Looks at the current Images that are on the Docker.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/env">ENV &ltkey&gt=&ltvalue&gt,...</a></td>
+                    <td>Set environment variables for all subsequent instructions.</td>
                 </tr>
                 <tr>
-                    <td>$ docker run hello-world</td>
-                    <td>Install hello-world image from docker daemon and run img.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/copy">COPY &ltsrc&gt... &ltdest&gt</a></td>
+                    <td>Copies local files and directories to container at specified (absolute) location. Can use multiple sources, and can include wildcards.</td>
                 </tr>
                 <tr>
-                    <td>$ docker rm [Container_ID]</td>
-                    <td>Remove Exited Image from docker.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/add">ADD &ltsrc&gt... &ltdest&gt</a></td>
+                    <td>Same as COPY, but sources may be URL, and will unpack sources if compressed.</td>
                 </tr>
                 <tr>
-                    <td>$ docker rm -f [Container_ID]</td>
-                    <td>Forcefully Remove Image from docker.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/expose">EXPOSE &ltport&gt [&ltport&gt...]</a></td>
+                    <td>Container will listen to specified ports at runtime. To make ports accessable to the host, use -p or -P to publish exposed ports.</td>
                 </tr>
                 <tr>
-                    <td>$ docker start [Container_ID]</td>
-                    <td>Start the Existing Docker Img.</td>
-                </tr>
-                <tr>
-                    <td>$ docker rmi [Image_ID]</td>
-                    <td>Remove Image that is not in Container.</td>
-                </tr>
-                <tr>
-                    <td>$ docker run -it ubuntu bash</td>
-                    <td>Install ubuntu:latest Image and run in Bash shell.</td>
-                </tr>
-                <tr>
-                    <td>$ exit</td>
-                    <td>Exit out of running shell.</td>
+                    <td><a href="https://docs.docker.com/engine/reference/builder/#/workdir">WORKDIR /path/to/workdir</a></td>
+                    <td>Set working directory for all following RUN, CMD, ENTRYPOINT, COPY, ADD instructions. Creates directory if it doesn't exist. Can use previously set ENV variables, but only those set in Dockerfile.</td>
                 </tr>
             </table>
+        </div>
+    </div>
+    <div class="container">
+        <h2>References and Helpful Sites</h2>
+        <div class="list-group">
+            <li><a href="http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/" class="list-group-item">RUN vs CMD vs ENTRYPOINT</a></li>
         </div>
     </div>
     <footer class="footer">
