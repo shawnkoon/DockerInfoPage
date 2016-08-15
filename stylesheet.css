@@ -54,3 +54,7 @@ table {
 .list-group {
     list-style: none;
 }
+
+.list-group li {
+    margin-bottom: 1px;
+}
