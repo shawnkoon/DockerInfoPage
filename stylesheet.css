@@ -58,3 +58,7 @@ table {
 .list-group li {
     margin-bottom: 1px;
 }
+
+.typeLogo {
+    margin-left: -8px;
+}
